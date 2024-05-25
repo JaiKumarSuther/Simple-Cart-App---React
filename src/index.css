@@ -24,10 +24,21 @@
 }
 
 .account {
-    background-color: rgb(110, 151, 255);
+    background-color: rgb(178, 197, 244);
     width: 100%;
     color: black;
     font-weight: bold;
     margin: 10px 0;
     padding: 10px;
 }
+.myrow {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+@media (max-width: 1200px) {
+    .addToCartButton  {
+        width: 100%;
+    }
+  }

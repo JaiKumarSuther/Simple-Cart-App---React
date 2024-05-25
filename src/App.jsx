@@ -8,14 +8,14 @@ export default function App() {
     {
       img: "https://www.kfcpakistan.com/images/b438e990-bc23-11ee-be0d-ed0e61ce8a3a-Untitleddesign(5)-min_variant_0-2024-01-26082002.png",
       title: "Twister Combo",
-      desc: "Twister + 1 Regular fries + 1 Regular drink",
+      desc: "Twister Combo + 1 Regular fries + 1 Regular drink",
       price: 670,
       quantity: 0
     },
     {
       img: 'https://www.kfcpakistan.com/images/43a98620-ffaa-11ed-b6b3-6970cc1cd666-zingerstack-Combo-2023-05-31115706.png',
       title: "Zinger Stacker Combo",
-      desc: "1 Zinger Stacker + 1 Regular fries + 1 Regular drink",
+      desc: "1 Zinger Stacker + 1 Regular fries + 1 drink",
       price: 890,
       quantity: 0
     },
@@ -49,7 +49,7 @@ export default function App() {
   return (
     <div className="container mt-5">
       <div className="account">Cart({quantity} | Rs. {totalPrice})</div>
-      <div className="row">
+      <div className="row myrow">
         {products.map((ele, index) => (
           <div className="col-lg-3 col-md-4 mb-4" key={index}>
             <div className="card">
@@ -58,7 +58,7 @@ export default function App() {
                 <h5 className="card-title">{ele.title}</h5>
                 <p className="card-text">{ele.desc}</p>
                 <p className="card-text">RS {ele.price}</p>
-                <a href="#" className="btn btn-primary" onClick={() => handleAddToCart(index)}>
+                <a href="#" className="btn btn-primary addToCartButton" onClick={() => handleAddToCart(index)}>
                   Add to cart <span className="quantity">{ele.quantity}</span>
                 </a>
               </div>
